@@ -75,7 +75,7 @@ function App() {
             </div>
             <input
               type="text"
-              className="block w-full pl-11 pr-4 py-4 sm:text-lg border-none focus:ring-0 text-gray-900 placeholder-gray-400 outline-none"
+              className="block w-full pl-11 pr-4 py-4 sm:text-lg border-none focus:ring-0 text-gray-900 placeholder:text-gray-400 outline-none"
               placeholder="Enter GitHub organization name (e.g., netflix)..."
               value={orgName}
               onChange={(e) => setOrgName(e.target.value)}
@@ -95,7 +95,7 @@ function App() {
             </button>
           </div>
           {error && (
-            <div className="mt-4 p-4 rounded-xl bg-red-50 text-red-700 border border-red-100 flex items-start gap-3 animate-in fade-in slide-in-from-top-2">
+            <div className="mt-4 p-4 rounded-xl bg-red-50 text-red-700 border border-red-100 flex items-start gap-3">
               <AlertCircle className="w-5 h-5 shrink-0 mt-0.5 text-red-500" />
               <p className="text-sm font-medium">{error}</p>
             </div>
@@ -119,7 +119,7 @@ function App() {
         )}
 
         {data && Object.keys(data).length > 0 && (
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden animate-in fade-in slide-in-from-bottom-4">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
             <div className="px-6 py-5 border-b border-gray-200 bg-gray-50/50 flex justify-between items-center">
               <h3 className="text-lg font-semibold text-gray-900">
                 Access Overview
